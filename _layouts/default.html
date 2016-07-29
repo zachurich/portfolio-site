@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <section class="hero-section">
+      <h1><span class="first">Design</span><span class="second"> + </span><span class="third">Code</span></h1>
+    </section>
+    <!--About-->
+    <section class="about-section">
+      <div class="bio-pic"></div>
+      <p>Hey there! I'm Zach Urich, a <span>designer and front-end developer</span> with a passion for creating. Clean, cohesive, and functional are three key values I stick to within my creative process.</p>
+      <div class="button">{% include bitters/modal.html %}</div>
+    </section>
+    <!--Work-->
+    <section id="work" class="heading-divider">
+      <p>Work</p>
+    </section>
+    <section class="work-section">
+      <div class="flex-container">
+        <div class="flex-row">
+          <div class="work-thumb"></div>
+          <div class="work-thumb"></div>
+          <div class="work-thumb"></div>
+        </div>
+        <div class="flex-row">
+          <div class="work-thumb"></div>
+          <div class="work-thumb"></div>
+          <div class="work-thumb"></div>
+        </div>
+      </div>
+    </section>
+    <!--Github Feed-->
+    <section id="activity" class="heading-divider">
+      <p>Activity</p>
+    </section>
+    {% include github.html %}
+    <!--Contact-->
+    <section id="contact" class="heading-divider">
+      <p>Contact</p>
+    </section>
+    <section class="contact-section">
+      <form>
+          <input placeholder='Name'></input>
+          <input placeholder='Email'></input>
+          <textarea placeholder='Inquiry'></textarea>
+          <button>Submit</button>
+      </form>
+    </section>
+    {% include footer.html %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="assets/js/github-activity.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/main.js"></script>
+
+  </body>
+
+</html>

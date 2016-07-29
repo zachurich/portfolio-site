@@ -1,0 +1,51 @@
+
+// Colors
+$mainColor: #3498db; //blue
+$green: #24b574;
+$red: #d44c57;
+$yellow: #f1a85e;
+$mainColorShade: #023854;
+$mainColorHover: #268fd6;
+$navColor: #777;
+
+// Styles
+$corners: 2px;
+$buttonShadows: 0px 20px 20px -10px rgba(0,0,0, 0.2);
+
+// Transitions
+$normal: 0.08s ease-in-out;
+$slow: 0.2s ease-in-out;
+
+// Fonts
+$mainFont: 'Varela Round';
+$navFont: 1em;
+$copyFont: 1.2em;
+$headerFont: 1.5em;
+
+// Bitters
+$base-border-color: #dcdcdc !default;
+$base-border-radius: 3px !default;
+$base-background-color: #fff !default;
+$base-font-size: 1em !default;
+$base-line-height: 1.5em !default;
+$action-color: #477dca !default;
+$dark-gray: #333 !default;
+$light-gray: #ddd !default;
+$medium-screen: 40em !default;
+$large-screen: 53.75em !default;
+$base-font-color: $dark-gray !default;
+$modal-padding: 3em;
+$modal-background: $base-background-color;
+$modal-close-color: $light-gray;
+$modal-image-height: 135px;
+$modal-image-width: $modal-image-height;
+$modal-trigger-image-width: 300px;
+
+//Breakpoints
+$mobile: new-breakpoint(max-width 480px);
+$mobile-medium: new-breakpoint(max-width 665px);
+$intermediate: new-breakpoint(max-width 816px);
+$tablet: new-breakpoint(max-width 1090px);
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);

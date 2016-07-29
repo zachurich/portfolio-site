@@ -1,0 +1,96 @@
+.container {
+  height: 100%;
+  max-width: 86em;
+  margin: 0 auto;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  transition: $normal;
+header {
+  background-color: white;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  box-shadow: 0px 0 50px 5px rgba(0,0,0, 0.2);
+  z-index: 1;
+  .logo {
+    margin-left: 20px;
+    box-sizing: border-box;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $mainFont;
+    font-size: 1.2em;
+    color: $mainColor;
+    p {
+      border: 2px solid $mainColor;
+      padding: 0px 30px;
+      line-height: 42px;
+      height: 42px;
+      font-weight: 600;
+      border-radius: $corners;
+    }
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    li {
+      margin-right: 20px;
+      font-size: $navFont;
+      font-family: $mainFont;
+      font-weight: 600;
+      cursor: pointer;
+      border-bottom: 2px solid white;
+      box-sizing: border-box;
+      transition: $normal;
+      a {
+        text-decoration: none;
+        color: $navColor;
+        padding: 8px 10px;
+        width: 100%;
+        display: block;
+        &:hover {
+          color: $mainColor;
+        }
+      }
+      &:hover {
+        border-bottom: 2px solid $mainColor;
+      }
+    }
+    .callToAction {
+      background-color: $red;
+      border-radius: $corners;
+      margin-left: 20px;
+      border: 0;
+      box-shadow: inset 0 0 0 0 $mainColor;
+      transition: $slow;
+      a {
+        color: white;
+        padding: 10px 30px;
+        display: block;
+        width: 100%;
+        transition: $normal;
+        &:hover {
+          color: white;
+        }
+      }
+      &:hover {
+        border: 0;
+        box-shadow: inset 120px 0 0 0 $mainColor;
+      }
+    }
+  }
+}
+}
