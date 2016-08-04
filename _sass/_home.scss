@@ -41,6 +41,10 @@
     color: white;
     font-weight: 600;
     width: 40%;
+    text-align: center;
+    @include media($mobile-medium) {
+      width: 70%;
+    }
     span {
       color: $mainColorShade;
     }
@@ -122,29 +126,31 @@
         flex-direction: column;
       }
       .work-thumb {
-        border: 4px solid white;
+        border: 6px solid white;
         margin: 20px;
-        height: 200px;
-        width: 250px;
+        height: 230px;
+        width: 300px;
+        min-width: 300px;
         transition: $normal;
         @include media($intermediate) {
           height: 300px;
-          width: 450px;
+          width: 400px;
         }
         @include media($mobile) {
-          height: 200px;
-          width: 250px;
+          height: 230px;
+          width: 300px;
         }
         &:hover {
           box-shadow: $buttonShadows;
           transform: scale(1.05);
+          cursor: pointer;
         }
       }
     }
   }
 }
 .contact-section {
-  height: 600px;
+  padding: $sectionPadding;
   background-color: $red;
   display: flex;
   justify-content: center;
@@ -156,8 +162,7 @@
     align-items: center;
     flex-direction: column;
     input,
-    textarea,
-    button {
+    textarea {
       font-family: $mainFont;
       border-radius: $corners;
       font-size: $copyFont;
@@ -190,6 +195,10 @@
       color: $red;
       box-shadow: $buttonShadows;
       transform: scale(1.03);
+      outline: none;
+    }
+    button:focus {
+      outline: none;
     }
     ::-webkit-input-placeholder {
          color: white;
@@ -203,16 +212,7 @@
       }
     }
     button {
-      height: 50px;
-      text-align: center;
-      width: 20%;
-      background-color: transparent;
-      border: 2px solid white;
-      &:hover {
-        background-color: white;
-        color: $red;
-        box-shadow: $buttonShadows;
-      }
+      @extend .button;
     }
   }
 }

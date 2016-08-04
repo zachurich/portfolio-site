@@ -1,0 +1,44 @@
+.button {
+  margin-top: 20px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $mainFont;
+  font-size: $copyFont;
+  color: white;
+  border-radius: $corners;
+  padding: 8px 20px;
+  background-color: transparent;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: $normal;
+  &:hover {
+    background-color: white;
+    color: $mainColor;
+    box-shadow: $buttonShadows;
+  }
+}
+.button.red {
+  &:hover {
+    color: $red;
+  }
+}
+
+.project {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  img {
+    width: 100%;
+    height: 100%;
+    -webkit-filter: grayscale(100%);
+    opacity: 0.7;
+    transition: $normal;
+    &:hover {
+      -webkit-filter: grayscale(0);
+      opacity: 1;
+    }
+  }
+}
