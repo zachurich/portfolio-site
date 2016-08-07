@@ -9,11 +9,9 @@ $(document).ready(function() {
   // smoothScroll function is applied from the document ready function
   $('a[href="#1"]').on('click', function() {
     // console.log('Hello');
-    $('.project-box').removeClass('hidden');
-    $('.flex-row').addClass('hidden');
+    $('.work-section').css('left', '-100%');
   })
   $('.back-button').on('click', function() {
-    $('.project-box').addClass('hidden');
-    $('.flex-row').removeClass('hidden');
+      $('.work-section').css('left', '0%');
   })
 });
