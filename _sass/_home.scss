@@ -117,40 +117,27 @@ h1 {
   width: 200%;
   left: 0%;
   position: relative;
-  transition: 2s ease-in-out;
+  transition: $slide;
+  overflow: hidden;
 
   .flex-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    display: inline-block;
     width: 50%;
-    flex-wrap: wrap;
-    transition: 2s ease-in-out;
+    transition: $slide;
     .flex-row {
       display: flex;
       align-items: center;
       justify-content: center;
-      @include media($intermediate) {
-        flex-direction: column;
-      }
+      margin: 0 auto;
+      max-width: 1024px;
+      flex-wrap: wrap;
       .work-thumb {
         border: 10px solid white;
         margin: 20px;
         height: 230px;
         width: 300px;
-        min-width: 300px;
         transform: scale(1);
         transition: $normal;
-        @include media($intermediate) {
-          height: 300px;
-          width: 400px;
-        }
-        @include media($mobile) {
-          height: 230px;
-          width: 300px;
-        }
         &:hover {
           box-shadow: $buttonShadows;
           transform: scale(1) translateY(-5px);
