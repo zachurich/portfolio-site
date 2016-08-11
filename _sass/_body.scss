@@ -1,0 +1,13 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: $normal;
+}
+p {
+  color: white;
+  font-size: $copyFont;
+  font-family: $mainFont;
+}
+h1 {
+  font-size: 2em;
+}

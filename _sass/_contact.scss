@@ -1,0 +1,67 @@
+.contact-section {
+  padding: $sectionPadding;
+  background-color: $red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    input,
+    textarea {
+      font-family: $mainFont;
+      border-radius: $corners;
+      font-size: $copyFont;
+      font-weight: 300;
+      color: white;
+      width: 90%;
+      margin-top: 20px;
+      transition: $normal;
+      &:focus {
+        outline: 0;
+      }
+    }
+    input,
+    textarea {
+      color: white;
+      padding-top: 5px;
+      text-indent: 15px;
+      background-color: rgba(255, 255, 255, 0);
+    }
+    input {
+      height: 50px;
+      border-bottom: 2px solid #fff;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+    input:focus,
+    textarea:focus {
+      background-color: white;
+      color: $red;
+      box-shadow: $buttonShadows;
+      transform: scale(1.03);
+      outline: none;
+    }
+    button:focus {
+      outline: none;
+    }
+    ::-webkit-input-placeholder {
+         color: white;
+    }
+    textarea {
+      padding-top: 10px;
+      height: 100px;
+      border: 2px solid white;
+      &:focus {
+        transform: scale(1.03);
+      }
+    }
+    button {
+      @extend .button;
+    }
+  }
+}

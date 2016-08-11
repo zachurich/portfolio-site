@@ -6,14 +6,28 @@ GitHubActivity.feed({
 
 // Click Events for Work Section
 $(document).ready(function() {
-  // smoothScroll function is applied from the document ready function
-  $('a[href="#1"]').on('click', function() {
+  $('.menu-button').on('click', function() {
+    if($('.menu-mobile').hasClass('slideOut')) {
+      $('.menu-mobile').removeClass('slideOut');
+      $('.menu-mobile').addClass('slideUp');
+    } else {
+      $('.menu-mobile').addClass('slideOut');
+      $('.menu-mobile').removeClass('slideUp');
+    }
+  });
+  $('.work-thumb').on('click', function() {
     // console.log('Hello');
-    $('.project-box').removeClass('hidden');
-    $('.flex-row').addClass('hidden');
-  })
+    $('.work-section').css('left', '-100%');
+  //  $('.flex-row').hide(2000);
+    $('.project-container').show();
+  });
   $('.back-button').on('click', function() {
-    $('.project-box').addClass('hidden');
-    $('.flex-row').removeClass('hidden');
-  })
+      $('.work-section').css('left', '0%');
+      $('.flex-row').show();
+      $('.project-container').hide(500);
+  });
+  $('.read-more').on('click', function() {
+      $('.about-more').toggleClass('grow');
+      $('.read-more').hide();
+  });
 });

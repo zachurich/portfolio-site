@@ -1,10 +1,35 @@
-.hidden {
-  display: none !important;
+// Section Dividers
+#work {
+  p {
+    color: $green;
+  }
 }
-.show {
-  display: block !important;
+#contact {
+  p {
+    color: $red;
+  }
+}
+#activity {
+  p {
+    color: $yellow;
+  }
+}
+.heading-divider {
+  width: 100%;
+  height: 120px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: $mainColor;
+    font-family: $mainFont;
+    font-size: $headerFont;
+    font-weight: 600;
+  }
 }
 
+// Button Styles
 .button {
   margin-top: 20px;
   height: 50px;
@@ -19,24 +44,29 @@
   padding: 8px 20px;
   background-color: transparent;
   border: 2px solid white;
+  box-shadow: $buttonShadows;
   cursor: pointer;
   transition: $normal;
   &:hover {
     background-color: white;
-    color: $mainColor;
-    box-shadow: $buttonShadows;
+    box-shadow: $buttonShadowsActive;
+    transform: scale(1);
+    cursor: pointer;
   }
   &:active {
     box-shadow: $buttonShadowsActive;
-    transform: scale(0.98) translateY(0px);
+    transform: scale(0.98);
   }
 }
 .button.red {
+  transition: $normal;
   &:hover {
+    background-color: white;
     color: $red;
   }
 }
 
+// Project Styles
 .project {
   height: 100%;
   width: 100%;
@@ -51,38 +81,93 @@
     }
   }
 }
-
-.project-box {
-  width: 80%;
-  height: 800px;
+.project-container {
+  width: 50%;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  position: relative;
-  .content {
-    width: 80%;
-    h1 {
-      color: white;
-      font-family: $mainFont;
-      font-size: 2em;
-    }
-    img {
-      width: 80%;
+  justify-content: center;
+  transition: $slide;
+  display: none;
+  .project-box {
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    transition: $slide;
+    .content.title {
+      position: relative;
+      .back-button {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 2px solid $green;
+        position: absolute;
+        top: 23px;
+        left: -60px;
+        transition: $normal;
+        @include media($intermediate) {
+          left: 0px;
+        }
+        &:hover {
+          background-color: $green;
+          cursor: pointer;
+          box-shadow: $buttonShadowSmall;
+        }
+      }
+        h1 {
+          font-family: $mainFont;
+          font-size: 1.8em;
+          @include media($intermediate) {
+            text-align: center;
+          }
+        }
+      }
+      .content {
+        margin: 0 auto;
+        width: 80%;
+        color: $navColor;
+      p {
+        color: $navColor;
+        font-size: $copyFont;
+      }
+      img {
+        width: 100%;
+      }
     }
   }
-  .back-button {
-    height: 50px;
-    width: 50px;
-    background-color: $green;
-    border-radius: 50%;
-    border: 4px solid white;
-    position: absolute;
-    top: 20px;
-    left: -20px;
-    opacity: 0.5;
-    &:hover {
-      cursor: pointer;
-      opacity: 1;
-    }
-  }
+}
+
+// Event Classes/Animations
+.grow {
+  display: block !important;
+  animation: grow 0.5s forwards;
+}
+
+@keyframes grow {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.slideOut {
+  animation: slideOut 0.5s forwards;
+  transition: 0.5s ease-in-out;
+}
+
+@keyframes slideOut {
+  0% {top: -350px; transform: scale(1); opacity: 0;}
+  50% {top: 90px; transform: scale(1.05);}
+  80% {top: 80px; transform: scale(1);}
+  100% {top: 80px; transform: scale(1); opacity: 1;}
+}
+
+.slideUp {
+  animation: slideUp 0.5s forwards;
+  transition: 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  0% {top: 80px; opacity: 1}
+  50% {top: 60px; opacity: 0}
+  100% {top: -350px; opacity: 0}
 }
