@@ -16,7 +16,7 @@ header {
   position: fixed;
   top: 0;
   box-shadow: 0px 0 50px 5px rgba(0,0,0, 0.2);
-  z-index: 1;
+  z-index: 9999;
   .logo {
     margin-left: 20px;
     box-sizing: border-box;
@@ -55,7 +55,7 @@ header {
       margin-right: 20px;
       font-size: $navFont;
       font-family: $mainFont;
-      font-weight: 600;
+      font-weight: 400;
       cursor: pointer;
       border-bottom: 2px solid white;
       box-sizing: border-box;
@@ -98,27 +98,28 @@ header {
     }
   }
   .mobile-menu {
-    display: none;
     width: 100%;
     position: relative;
-    @include media($intermediate) {
-      display: block;
       .menu-button {
+        display: none;
         position: absolute;
         border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        top: 10px;
+        width: 50px;
+        height: 50px;
+        top: 15px;
         right: 20px;
+        @include media($intermediate) {
+          display: block;
+        }
         span {
           display: block;
           margin: 0 auto;
-          width: 30px;
+          width: 26px;
           height: 2px;
           background-color: $mainColor;
-          margin-top: 8px;
+          margin-top: 6px;
           &:nth-child(1) {
-            margin-top: 20px;
+            margin-top: 17px;
           }
         }
         &:hover {
@@ -127,41 +128,36 @@ header {
       }
       .menu-mobile {
         list-style-type: none;
-        background: $mainColor;
-        width: 30%;
+        background: $offWhite;
+        width: 150px;
         position: absolute;
-        top: 80px;
+        top: -350px;
         right: 20px;
         margin-top: 20px;
-        padding: 0;
+        padding: 10px 0;
         text-align: center;
         box-shadow: $buttonShadows;
+        border: 1px solid #ddd;
         border-radius: 4px;
-        @include media($mobile-medium) {
-          left: 0;
-          right: 0;
-          top: 60px;
-          width: 100%;
-          border-radius: 0;
-        }
+        transition: 0.5s ease-in-out;
         li {
           display: block;
           padding: 0px;
           width: 100%;
-          height: 50px;
-          line-height: 50px;
+          height: 40px;
+          line-height: 40px;
           a {
             display: block;
             height: 100%;
             width: 100%;
-            font-weight: 600;
+            font-weight: 300;
             text-decoration: none;
             font-family: $mainFont;
-            color: white;
+            color: $navColor;
           }
         }
       }
-    }
+
   }
 }
 }

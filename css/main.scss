@@ -10,9 +10,15 @@
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import 'variables';
 @import 'modal';
-@import 'header';
-@import 'home';
-@import 'footer';
 @import 'github-activity';
 @import 'components';
 @import 'scss/font-awesome';
+
+// Main Styles
+@import 'header';
+@import 'hero';
+@import 'about';
+@import 'work';
+@import 'contact';
+@import 'body';
+@import 'footer';
