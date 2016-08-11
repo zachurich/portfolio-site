@@ -17,8 +17,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      font-weight: bold;
-      font-size: $navFont;
+      font-weight: 300;
+      font-size: $copyFont;
       font-family: $mainFont, sans-serif;
       line-height: 1.3;
       overflow-y: auto;
@@ -46,25 +46,25 @@
     .gha-feed small{
       color: #666;
       font-weight: normal;
-      font-size: $navFont;
+      font-size: $copyFont;
     }
 
     .gha-feed small a {
       font-weight: normal;
     }
 
-    .gha-feed small a .more-commits { font-size: $navFont; }
+    .gha-feed small a .more-commits { font-size: $copyFont; }
 
     span.gha-time {
       color: #bbb;
       font-weight: normal;
-      font-size: $navFont;
+      font-size: $copyFont;
     }
 
     .gha-feed a {
       color: $yellow;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 300;
     }
 
     .gha-feed a:hover {
@@ -83,8 +83,8 @@
       float: right;
       color: #495961;
       padding-right: 20px;
-      font-size: $navFont;
-      font-weight: bold;
+      font-size: $copyFont;
+      font-weight: 300;
     }
 
     .gha-footer a:hover { text-decoration: none; }
@@ -151,7 +151,7 @@
 
     .gha-activity.gha-small {
       font-weight: normal;
-      font-size: $navFont;
+      font-size: $copyFont;
     }
 
     .gha-activity.gha-small a {
@@ -159,7 +159,7 @@
     }
 
     .gha-activity.gha-small span {
-      font-size: $navFont;
+      font-size: $copyFont;
     }
 
     .gha-activity:last-child {
@@ -185,7 +185,7 @@
     }
 
     .gha-activity-icon .gha-small {
-      font-size: $navFont;
+      font-size: $copyFont;
     }
 
     .gha-message {
@@ -194,19 +194,19 @@
       margin: 0 auto;
     }
 
-    .gha-message-commits { font-size: $navFont; }
+    .gha-message-commits { font-size: $copyFont; }
 
     .gha-message-merge {
       padding: 3px 7px;
       border-radius: 3px;
       background: #e8f1f6;
       color: rgba(0,0,0,0.5);
-      font-size: $navFont;
+      font-size: $copyFont;
       line-height: 2.0;
     }
 
     .gha-sha {
-      font-size: $navFont;
+      font-size: $copyFont;
       font-family: Consolas, "Liberation Mono", Courier, monospace;
     }
 
@@ -229,7 +229,7 @@
       margin: 0 auto;
       padding: 6px 10px 5px;
       color: #495961;
-      font-size: $navFont;
+      font-size: $copyFont;
     }
 
     .gha-user-info a { color: #495961; }
@@ -248,13 +248,13 @@
       background: #ffffde;
       color: #6d6d4b;
       font-weight: normal;
-      font-size: $navFont;
+      font-size: $copyFont;
     }
 
     .gha-time {
       color: #bbb;
       font-weight: normal;
-      font-size: $navFont;
+      font-size: $copyFont;
     }
 
     .gha-clear { clear: both; }

@@ -1,0 +1,43 @@
+.work-section {
+  padding: $sectionPadding;
+  background-color: $offWhite;
+  display: flex;
+  width: 200%;
+  left: 0%;
+  position: relative;
+  transition: $slide;
+  overflow-x: hidden;
+
+  .flex-container {
+    display: inline-block;
+    width: 50%;
+    transition: $slide;
+    .flex-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 1024px;
+      flex-wrap: wrap;
+      .work-thumb {
+        box-shadow: 0 0 0 1px #ddd;
+        border-radius: 2px;
+        border: 10px solid white;
+        margin: 20px;
+        height: 230px;
+        width: 300px;
+        transform: scale(1);
+        transition: $normal;
+        &:hover {
+          box-shadow: $buttonShadows;
+          transform: scale(1) translateY(-5px);
+          cursor: pointer;
+        }
+        &:active {
+          box-shadow: $buttonShadowSmall;
+          transform: scale(0.98) translateY(0px);
+        }
+      }
+    }
+  }
+}
