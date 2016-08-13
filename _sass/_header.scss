@@ -10,7 +10,7 @@ body {
   font-size: 16px;
   transition: $normal;
 header {
-  background-color: white;
+  background-color: $transparency;
   height: 80px;
   width: 100%;
   position: fixed;
@@ -100,6 +100,7 @@ header {
   .mobile-menu {
     width: 100%;
     position: relative;
+    z-index: 1;
       .menu-button {
         display: none;
         position: absolute;
@@ -108,6 +109,7 @@ header {
         height: 50px;
         top: 15px;
         right: 20px;
+        transition: $normal;
         @include media($intermediate) {
           display: block;
         }
@@ -116,8 +118,10 @@ header {
           margin: 0 auto;
           width: 26px;
           height: 2px;
-          background-color: $mainColor;
+          background-color: $gray;
           margin-top: 6px;
+          transition: $normal;
+          border-radius: $corners;
           &:nth-child(1) {
             margin-top: 17px;
           }
@@ -128,18 +132,29 @@ header {
       }
       .menu-mobile {
         list-style-type: none;
-        background: $offWhite;
+        background: rgba(2,56,84, 0.97);
         width: 150px;
         position: absolute;
+        z-index: 1;
         top: -350px;
         right: 20px;
         margin-top: 20px;
         padding: 10px 0;
         text-align: center;
         box-shadow: $buttonShadows;
-        border: 1px solid #ddd;
         border-radius: 4px;
         transition: 0.5s ease-in-out;
+        &:before {
+          position: absolute;
+          top: -10px;
+          left: 76%;
+          height: 0;
+          width: 0;
+          content: ' ';
+          border-right: 10px solid transparent;
+          border-left: 10px solid transparent;
+          border-bottom: 10px solid $mainColorShade;
+        }
         li {
           display: block;
           padding: 0px;
@@ -152,8 +167,8 @@ header {
             width: 100%;
             font-weight: 300;
             text-decoration: none;
+            font-weight: 600;
             font-family: $mainFont;
-            color: $navColor;
           }
         }
       }
