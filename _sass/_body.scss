@@ -1,7 +1,13 @@
+html,
+body {
+  overflow-x: hidden;
+  background-color: $offWhite;
+}
 body {
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
   transition: $normal;
+  width: 100%;
+  position: relative;
 }
 p {
   color: white;
