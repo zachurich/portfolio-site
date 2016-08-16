@@ -6,6 +6,19 @@ GitHubActivity.feed({
 
 // Click Events for Work Section
 $(document).ready(function() {
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 400) {
+        //clearHeader, not clearheader - caps H
+        $(".content-1").addClass("popIn");
+        window.setTimeout(function(){
+          $('.content-2').addClass("popIn");
+        }, 2000);
+        window.setTimeout(function(){
+          $('.content-3').addClass("popIn");
+        }, 4000);
+    }
+});
   // First, detect if menu is open and close on click
   $(window).click(function() {
     if($('.menu-button').hasClass('animate')) {
@@ -28,12 +41,14 @@ $(document).ready(function() {
   });
   $('.work-thumb').on('click', function() {
     // console.log('Hello');
-    $('.work-section').css('left', '-100%');
+    $('.work-section').removeClass('slideRight');
+    $('.work-section').addClass('slideLeft');
   //  $('.flex-row').hide(2000);
     $('.project-container').show();
   });
   $('.back-button').on('click', function() {
-      $('.work-section').css('left', '0%');
+      $('.work-section').removeClass('slideLeft');
+      $('.work-section').addClass('slideRight');
       $('.flex-row').show();
       $('.project-container').hide(500);
   });
