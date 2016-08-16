@@ -24,7 +24,7 @@ $slow: 0.2s ease-in-out;
 $slide: 0.5s ease-in-out;
 
 // Fonts
-$mainFont: 'Varela Round', sans-serif;
+$mainFont: 'Montserrat', sans-serif;
 $navFont: 1em;
 $copyFont: 1em;
 $headerFont: 1.5em;
@@ -53,6 +53,7 @@ $mobile: new-breakpoint(max-width 480px);
 $mobile-medium: new-breakpoint(max-width 665px);
 $intermediate: new-breakpoint(max-width 816px);
 $tablet: new-breakpoint(max-width 1090px);
+$desktop: new-breakpoint(min-width 1090px);
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
-@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);

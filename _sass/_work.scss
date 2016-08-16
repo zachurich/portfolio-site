@@ -7,6 +7,7 @@
   position: relative;
   transition: $slide;
   overflow-x: hidden;
+  overflow: hidden;
 
   .flex-container {
     display: inline-block;
@@ -19,15 +20,36 @@
       margin: 0 auto;
       max-width: 1024px;
       flex-wrap: wrap;
+      @include media($tablet) {
+
+      }
+      @include media($mobile-medium) {
+
+      }
       .work-thumb {
         box-shadow: 0 0 0 1px #ddd;
         border-radius: 2px;
         border: 10px solid white;
         margin: 20px;
-        height: 230px;
-        width: 300px;
+        height: 200px;
+        width: 250px;
         transform: scale(1);
         transition: $normal;
+        @include media($tablet) {
+          height: 200px;
+          width: 250px;
+          margin: 10px;
+        }
+        @include media($intermediate) {
+          height: 180px;
+          width: 230px;
+          margin: 5px;
+        }
+        @include media($mobile-medium) {
+          height: 130px;
+          width: 170px;
+          margin: 5px;
+        }
         &:hover {
           box-shadow: $buttonShadows;
           transform: scale(1) translateY(-5px);
