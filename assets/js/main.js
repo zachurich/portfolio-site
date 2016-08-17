@@ -42,10 +42,10 @@ $(document).ready(function() {
   });
   $('.work-thumb').on('click', function() {
     // console.log('Hello');
+    $('.project-container').show();
     $('.work-section').removeClass('slideRight');
     $('.work-section').addClass('slideLeft');
   //  $('.flex-row').hide(2000);
-    $('.project-container').show();
   });
   $('.back-button').on('click', function() {
       $('.work-section').removeClass('slideLeft');
