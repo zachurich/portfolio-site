@@ -34,23 +34,23 @@ footer {
         margin-right: 20px;
         transition: $normal;
         &:nth-child(1) {
-          &:hover {
+          &:active {
             background: $mainColor;
           }
         }
         &:nth-child(2) {
-          &:hover {
+          &:active {
             background: $red;
           }
         }
         &:nth-child(3) {
-          &:hover {
+          &:active {
             background: $green;
           }
         }
         &:nth-child(4) {
           margin-right: 0;
-          &:hover {
+          &:active {
             background: $yellow;
           }
         }
@@ -63,25 +63,25 @@ footer {
         }
         i.fa-twitter {
           color: $mainColor;
-          &:hover {
+          &:active {
             color: white;
           }
         }
         i.fa-instagram {
           color: $red;
-          &:hover {
+          &:active {
             color: white;
           }
         }
         i.fa-dribbble {
           color: $green;
-          &:hover {
+          &:active {
             color: white;
           }
         }
         i.fa-linkedin {
           color: $yellow;
-          &:hover {
+          &:active {
             color: white;
           }
         }

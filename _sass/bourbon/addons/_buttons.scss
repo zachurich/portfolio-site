@@ -8,7 +8,7 @@
 ///   }
 ///
 ///   #{$all-buttons-focus},
-///   #{$all-buttons-hover} {
+///   #{$all-buttons-active} {
 ///     background-color: #0f0;
 ///   }
 ///
@@ -28,10 +28,10 @@
 ///   input[type="button"]:focus,
 ///   input[type="reset"]:focus,
 ///   input[type="submit"]:focus,
-///   button:hover,
-///   input[type="button"]:hover,
-///   input[type="reset"]:hover,
-///   input[type="submit"]:hover {
+///   button:active,
+///   input[type="button"]:active,
+///   input[type="reset"]:active,
+///   input[type="submit"]:active {
 ///     background-color: #0f0;
 ///   }
 ///
@@ -56,9 +56,9 @@ $buttons-list: 'button',
 $all-buttons:        assign-inputs($buttons-list);
 $all-buttons-active: assign-inputs($buttons-list, active);
 $all-buttons-focus:  assign-inputs($buttons-list, focus);
-$all-buttons-hover:  assign-inputs($buttons-list, hover);
+$all-buttons-active:  assign-inputs($buttons-list, active);
 
 $all-button-inputs:        $all-buttons;
 $all-button-inputs-active: $all-buttons-active;
 $all-button-inputs-focus:  $all-buttons-focus;
-$all-button-inputs-hover:  $all-buttons-hover;
+$all-button-inputs-active:  $all-buttons-active;
