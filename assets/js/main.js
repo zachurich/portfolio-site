@@ -4,8 +4,9 @@ GitHubActivity.feed({
     limit: 5 // optional
 });
 
-// Click Events for Work Section
+
 $(document).ready(function() {
+  // Scroll Animation Detection
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     if (scroll >= 400) {

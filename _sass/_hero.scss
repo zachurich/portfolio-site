@@ -6,10 +6,17 @@
   justify-content: center;
   align-items: center;
   h1 {
+    text-align: center;
     color: $mainColor;
     font-family: $mainFont;
     font-weight: 700;
     font-size: 3em;
+    padding: 0 20px;
+    @include media($mobile-medium) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
     .first {
       color: $mainColor;
     }

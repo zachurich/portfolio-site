@@ -8,7 +8,7 @@
 ///   }
 ///
 ///   #{$all-text-inputs-focus},
-///   #{$all-text-inputs-hover} {
+///   #{$all-text-inputs-active} {
 ///     border: 1px solid #0f0;
 ///   }
 ///
@@ -50,21 +50,21 @@
 ///   input[type="url"]:focus,
 ///   input[type="week"]:focus,
 ///   textarea:focus,
-///   input[type="color"]:hover,
-///   input[type="date"]:hover,
-///   input[type="datetime"]:hover,
-///   input[type="datetime-local"]:hover,
-///   input[type="email"]:hover,
-///   input[type="month"]:hover,
-///   input[type="number"]:hover,
-///   input[type="password"]:hover,
-///   input[type="search"]:hover,
-///   input[type="tel"]:hover,
-///   input[type="text"]:hover,
-///   input[type="time"]:hover,
-///   input[type="url"]:hover,
-///   input[type="week"]:hover,
-///   textarea:hover {
+///   input[type="color"]:active,
+///   input[type="date"]:active,
+///   input[type="datetime"]:active,
+///   input[type="datetime-local"]:active,
+///   input[type="email"]:active,
+///   input[type="month"]:active,
+///   input[type="number"]:active,
+///   input[type="password"]:active,
+///   input[type="search"]:active,
+///   input[type="tel"]:active,
+///   input[type="text"]:active,
+///   input[type="time"]:active,
+///   input[type="url"]:active,
+///   input[type="week"]:active,
+///   textarea:active {
 ///     border: 1px solid #0f0;
 ///   }
 ///
@@ -110,4 +110,4 @@ $text-inputs-list: 'input[type="color"]',
 $all-text-inputs:        assign-inputs($text-inputs-list);
 $all-text-inputs-active: assign-inputs($text-inputs-list, active);
 $all-text-inputs-focus:  assign-inputs($text-inputs-list, focus);
-$all-text-inputs-hover:  assign-inputs($text-inputs-list, hover);
+$all-text-inputs-active:  assign-inputs($text-inputs-list, active);

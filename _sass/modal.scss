@@ -61,8 +61,8 @@
       transform: rotate(45deg);
     }
 
-    &:hover::after,
-    &:hover::before {
+    &:active::after,
+    &:active::before {
       background: darken($modal-close-color, 10%);
     }
 
