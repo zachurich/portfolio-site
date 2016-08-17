@@ -17,3 +17,9 @@ p {
 h1 {
   font-size: 2em;
 }
+
+a,
+.button,
+.menu-button {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
