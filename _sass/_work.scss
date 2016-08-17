@@ -50,14 +50,10 @@
           width: 170px;
           margin: 5px;
         }
-        &:hover {
+        &:active {
           box-shadow: $buttonShadows;
           transform: scale(1) translateY(-5px);
           cursor: pointer;
-        }
-        &:active {
-          box-shadow: $buttonShadowSmall;
-          transform: scale(0.98) translateY(0px);
         }
       }
     }

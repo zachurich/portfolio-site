@@ -4,8 +4,9 @@ GitHubActivity.feed({
     limit: 5 // optional
 });
 
-// Click Events for Work Section
+
 $(document).ready(function() {
+  // Scroll Animation Detection
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     if (scroll >= 400) {
@@ -41,10 +42,10 @@ $(document).ready(function() {
   });
   $('.work-thumb').on('click', function() {
     // console.log('Hello');
+    $('.project-container').show();
     $('.work-section').removeClass('slideRight');
     $('.work-section').addClass('slideLeft');
   //  $('.flex-row').hide(2000);
-    $('.project-container').show();
   });
   $('.back-button').on('click', function() {
       $('.work-section').removeClass('slideLeft');
