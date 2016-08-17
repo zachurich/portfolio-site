@@ -6,6 +6,7 @@ GitHubActivity.feed({
 
 
 $(document).ready(function() {
+  document.addEventListener("touchstart", function(){}, true);
   // Scroll Animation Detection
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
