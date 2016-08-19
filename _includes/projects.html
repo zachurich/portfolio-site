@@ -1,14 +1,18 @@
 <div class="project-container shrink">
   <div class="project-box shrink">
-    <div class="content title">
-      <div class="back-button"></div>
-      <h1>Title</h1>
-    </div>
+
+    <!-- Load up the projects data from settings.yml -->
+    {% for projects in site.data.settings.projects %}
     <div class="content">
-      <img src="https://d13yacurqjgara.cloudfront.net/users/889567/screenshots/2682033/backpacklanding.png" alt=""/>
+      <!-- Inject project title from settings.yml -->
+      <div class="content title">
+        <h1 class="title">{{ projects.name }}</h1>
+        <div class="back-button"></div>
+      </div>
+      <!-- Inject Project Content(images, text, etc.) -->
+      {% include {{projects.file}} %}
     </div>
-    <div class="content">
-      <p>Lorem ipsum dolor sit amet, in primis latine nec, nec tollit essent fastidii ad. Corpora interpretaris mel ad, legere mediocrem in usu, in graece delenit accusata sea. Has et prima splendide consequat, his ea noster epicurei molestiae, per no singulis efficiendi cotidieque. Ut decore graeco eleifend sit, voluptaria signiferumque at pro.</p>
-    </div>
+    <!-- End that loop -->
+    {% endfor %}
   </div>
 </div>

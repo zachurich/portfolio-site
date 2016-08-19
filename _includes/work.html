@@ -4,12 +4,16 @@
 <section class="work-section">
   <div class="flex-container">
     <div class="flex-row">
-      <div class="work-thumb"><a href="#1" data-rel="1">{% include projects/1.html %}</a></div>
-      <div class="work-thumb"><a href="#2" data-rel="2">{% include projects/2.html %}</a></div>
-      <div class="work-thumb"><a href="#3" data-rel="3">{% include projects/3.html %}</a></div>
-      <div class="work-thumb"><a href="#4" data-rel="4">{% include projects/1.html %}</a></div>
-      <div class="work-thumb"><a href="#5" data-rel="5">{% include projects/2.html %}</a></div>
-      <div class="work-thumb"><a href="#6" data-rel="6">{% include projects/3.html %}</a></div>
+      {% for projects in site.data.settings.projects %}
+      <div class="work-thumb">
+        <img src="assets/images/projects/{{projects.folder}}/thumbnail.png" alt=""/>
+      </div>
+      {% endfor %}
+      <!-- <div class="work-thumb"><img src="assets/images/projects{{project.folder}}/thumbnail.jpg" alt=""></div>
+      <div class="work-thumb"><img src="assets/images/projects{{project.folder}}/thumbnail.jpg" alt=""></div>
+      <div class="work-thumb"><img src="assets/images/projects{{project.folder}}/thumbnail.jpg" alt=""></div>
+      <div class="work-thumb"><img src="assets/images/projects{{project.folder}}/thumbnail.jpg" alt=""></div>
+      <div class="work-thumb"><img src="assets/images/projects{{project.folder}}/thumbnail.jpg" alt=""></div> -->
     </div>
 
   </div>

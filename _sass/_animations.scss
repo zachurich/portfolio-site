@@ -1,0 +1,110 @@
+// Event Classes/Animations
+.grow {
+  display: block !important;
+  animation: grow 0.5s forwards;
+}
+
+.animate {
+  display: none;
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  top: 15px;
+  right: 20px;
+  transition: $slow;
+  span {
+    display: block;
+    margin: 0 auto;
+    width: 26px;
+    height: 2px;
+    background-color: $mainColor !important;
+    margin-top: 6px;
+    transition: $slow;
+    &:nth-child(1) {
+      margin-top: 25px !important;
+      transform: rotate(135deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      margin-top: -10px !important;
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+.popIn {
+  animation: popIn 0.7s ease-in-out forwards;
+}
+
+@keyframes popIn {
+  0% {
+    transform: translateY(-10%) scale(0.5); opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+  80% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: translateY(0%) scale(1); opacity: 1;
+  }
+}
+
+.slideLeft {
+  animation: slideLeft 0.6s forwards;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-54%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.slideRight {
+  animation: slideRight 0.5s forwards;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes grow {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.slideOut {
+  animation: slideOut 0.5s ease-in-out forwards;
+}
+
+@keyframes slideOut {
+  0% {transform: translateY(-350px) scale(0); opacity: 0;}
+  50% {transform: translateY(60px) scale(1); opacity: 0;}
+  100% {transform: translateY(80px) scale(1); opacity: 1;}
+}
+
+.slideDown {
+  animation: slideDown 0.5s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+  0% {transform: translateY(0px); opacity: 1}
+  100% {transform: translateY(60px); opacity: 0}
+}

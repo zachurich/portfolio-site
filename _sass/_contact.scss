@@ -13,7 +13,7 @@
     input,
     textarea {
       font-family: $mainFont;
-      border-radius: $corners;
+      border-radius: 0;
       font-size: $copyFont;
       font-weight: 300;
       color: white;
@@ -41,6 +41,7 @@
     input:focus,
     textarea:focus {
       background-color: white;
+      border-radius: $corners;
       color: $red;
       box-shadow: $buttonShadows;
       transform: scale(1.03);
@@ -53,6 +54,7 @@
          color: white;
     }
     textarea {
+      border-radius: $corners;
       -webkit-appearance: none;
       padding-top: 10px;
       height: 100px;

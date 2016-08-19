@@ -5,6 +5,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @include media($mobile-medium) {
+    height: 500px;
+  }
   h1 {
     text-align: center;
     color: $mainColor;
