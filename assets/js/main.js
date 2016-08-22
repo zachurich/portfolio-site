@@ -4,44 +4,40 @@ GitHubActivity.feed({
     limit: 5 // optional
 });
 
-
 $(document).ready(function() {
+
+  var thumbs = $('.work-thumb');
+
   document.addEventListener("touchstart", function(){}, true);
   // Scroll Animation Detection
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     if (scroll >= 400) {
-        //clearHeader, not clearheader - caps H
         $(".content-1").addClass("popIn");
-        window.setTimeout(function(){
-          $('.content-2').addClass("popIn");
-        }, 2000);
-        window.setTimeout(function(){
-          $('.content-3').addClass("popIn");
-        }, 4000);
     }
 });
-  // First, detect if menu is open and close on click
-  $(window).click(function() {
-    if($('.menu-button').hasClass('animate')) {
-      $('.menu-mobile').removeClass('slideOut');
-      $('.menu-mobile').addClass('slideUp');
+  // Close menu when click outside if open
+  $(document).on('click', function(event) {
+    if (!$(event.target).closest('.mobile-menu').length && $('.menu-mobile').hasClass('slideOut')) {
+      $('.menu-mobile').removeClass('popIn');
+      $('.menu-mobile').addClass('slideDown');
       $('.menu-button').removeClass('animate');
     }
   });
+
+  // Mobile Menu click function
   $('.menu-button').on('click', function() {
-    event.stopPropagation();
-    if($('.menu-mobile').hasClass('slideOut')) {
-      $('.menu-mobile').removeClass('slideOut');
-      $('.menu-mobile').addClass('slideUp');
+    if($('.menu-mobile').hasClass('popIn')) {
+      $('.menu-mobile').removeClass('popIn');
+      $('.menu-mobile').addClass('slideDown');
       $('.menu-button').removeClass('animate');
     } else {
-      $('.menu-mobile').addClass('slideOut');
-      $('.menu-mobile').removeClass('slideUp');
+      $('.menu-mobile').addClass('popIn');
+      $('.menu-mobile').removeClass('slideDown');
       $('.menu-button').addClass('animate');
     }
   });
-  $('.work-thumb').on('click', function() {
+  thumbs.on('click', function() {
     // console.log('Hello');
     $('.project-container').show();
     $('.work-section').removeClass('slideRight');
@@ -63,4 +59,23 @@ $(document).ready(function() {
       $('.read-more').html('Read Less');
     }
   });
+
+  function workLoad() {
+    $.ajaxSetup({ cache: true });
+    thumbs.on('click', function() {
+      // Define thumbs as 'this'
+      var $this = $(this),
+          // get proj title from thumb img alt text
+          title = $(this).children("img").attr("alt"),
+          // get proj folder from thumb data attr
+          folder = $this.data('folder'),
+          // get appropriate folder
+          newHTML = 'projects/' + folder + '.html';
+      // Load all the stuff
+      $('.content-content').load(newHTML);
+      $('.content-title').children('h1').html(title);
+    })
+  };
+  workLoad();
+
 });

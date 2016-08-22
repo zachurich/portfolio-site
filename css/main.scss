@@ -10,6 +10,7 @@
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import 'variables';
 @import 'modal';
+@import 'animations';
 @import 'github-activity';
 @import 'components';
 @import 'scss/font-awesome';
@@ -19,6 +20,7 @@
 @import 'hero';
 @import 'about';
 @import 'work';
+@import 'projects';
 @import 'contact';
 @import 'body';
 @import 'footer';

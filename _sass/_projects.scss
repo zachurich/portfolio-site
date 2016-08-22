@@ -1,0 +1,62 @@
+// Project Styles
+.project-container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: $slide;
+  display: none;
+  .project-box {
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    transition: $slide;
+    .content {
+      width: 80%;
+      margin: 0 auto;
+      position: relative;
+      .back-button {
+        z-index: 9999;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 2px solid $green;
+        position: absolute;
+        top: 18px;
+        left: -80px;
+        transition: $normal;
+        @include media($intermediate) {
+          left: 0px;
+        }
+        &:active {
+          background-color: $green;
+          cursor: pointer;
+          box-shadow: $buttonShadowSmall;
+        }
+      }
+      .content-title {
+        position: relative;
+          .title {
+            font-family: $mainFont;
+            font-size: 1.6em;
+            color: $green;
+            @include media($intermediate) {
+              text-align: center;
+            }
+          }
+        }
+      .content-content {
+        p {
+          color: $navColor;
+          font-size: $copyFont;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
