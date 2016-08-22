@@ -5,15 +5,10 @@
   <div class="flex-container">
     <div class="flex-row">
       {% for projects in site.data.settings.projects %}
-      <div class="work-thumb">
-        <img src="assets/images/projects/{{projects.folder}}/thumbnail.png" alt=""/>
+      <div class="work-thumb" data-folder="{{ projects.folder }}">
+        <img src="assets/images/projects/{{projects.folder}}/thumbnail.png" alt="{{ projects.name }}"/>
       </div>
       {% endfor %}
-      <!-- <div class="work-thumb"><img src="assets/images/projects{{project.folder}}/thumbnail.jpg" alt=""></div>
-      <div class="work-thumb"><img src="assets/images/projects{{project.folder}}/thumbnail.jpg" alt=""></div>
-      <div class="work-thumb"><img src="assets/images/projects{{project.folder}}/thumbnail.jpg" alt=""></div>
-      <div class="work-thumb"><img src="assets/images/projects{{project.folder}}/thumbnail.jpg" alt=""></div>
-      <div class="work-thumb"><img src="assets/images/projects{{project.folder}}/thumbnail.jpg" alt=""></div> -->
     </div>
 
   </div>

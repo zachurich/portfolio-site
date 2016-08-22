@@ -61,11 +61,21 @@ $(document).ready(function() {
   });
 
   function workLoad() {
-    $.ajaxSetup({ chache: false });
+    $.ajaxSetup({ cache: true });
     thumbs.on('click', function() {
-      var newHTML = '/projects/1.html';
-      $('.content').load(newHTML);
+      // Define thumbs as 'this'
+      var $this = $(this),
+          // get proj title from thumb img alt text
+          title = $(this).children("img").attr("alt"),
+          // get proj folder from thumb data attr
+          folder = $this.data('folder'),
+          // get appropriate folder
+          newHTML = 'projects/' + folder + '.html';
+      // Load all the stuff
+      $('.content-content').load(newHTML);
+      $('.content-title').children('h1').html(title);
     })
   };
+  workLoad();
 
 });
