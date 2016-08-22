@@ -1,18 +1,17 @@
 <div class="project-container shrink">
   <div class="project-box shrink">
 
-    <!-- Load up the projects data from settings.yml -->
-    {% for projects in site.data.settings.projects %}
+
     <div class="content">
-      <!-- Inject project title from settings.yml -->
-      <div class="content title">
-        <h1 class="title">{{ projects.name }}</h1>
-        <div class="back-button"></div>
+      <div class="back-button"></div>
+      <div class="content-title">
+        <!-- Inject project title -->
+        <h1 class="title"></h1>
       </div>
-      <!-- Inject Project Content(images, text, etc.) -->
-      {% include {{projects.file}} %}
+      <div class="content-content">
+        <!-- Inject project content -->
+      </div>
     </div>
-    <!-- End that loop -->
-    {% endfor %}
+
   </div>
 </div>
