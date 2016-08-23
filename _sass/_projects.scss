@@ -28,6 +28,22 @@
         top: 18px;
         left: -80px;
         transition: $normal;
+        .back {
+          position: absolute;
+          left: 10px;
+          display: inline-block;
+          background-color: $green;
+          height: 2px;
+          width: 12px;
+          &:nth-child(1) {
+            transform: rotate(-45deg);
+            top: 14px;
+          }
+          &:nth-child(2) {
+            transform: rotate(45deg);
+            top: 21px;
+          }
+        }
         @include media($intermediate) {
           left: 0px;
         }
@@ -35,6 +51,9 @@
           background-color: $green;
           cursor: pointer;
           box-shadow: $buttonShadowSmall;
+          .back {
+            background-color: white;
+          }
         }
       }
       .content-title {
