@@ -30,6 +30,7 @@ $(document).ready(function() {
     if($('.menu-mobile').hasClass('popIn')) {
       $('.menu-mobile').removeClass('popIn');
       $('.menu-mobile').addClass('slideDown');
+      // Hide after certain amount of time
       $('.menu-button').removeClass('animate');
     } else {
       $('.menu-mobile').addClass('popIn');

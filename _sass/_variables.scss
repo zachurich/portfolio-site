@@ -14,6 +14,8 @@ $transparency: rgba(255,255,255, 0.97);
 // Styles
 $corners: 2px;
 $buttonShadows: 0px 20px 20px -10px rgba(0,0,0, 0.2);
+$buttonShadowsRed: 0px 15px 15px -13px $red;
+$buttonShadowsBlue: 0px 20px 20px -15px $mainColor;
 $buttonShadowsActive: 0px 30px 20px -10px rgba(0,0,0, 0.2);
 $buttonShadowSmall: 0px 10px 20px -5px rgba(0,0,0, 0.2);
 $sectionPadding: 80px 0;
