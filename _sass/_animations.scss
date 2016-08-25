@@ -8,6 +8,7 @@
   display: none;
   position: absolute;
   border-radius: 50%;
+  background-color: $mainColor;
   width: 50px;
   height: 50px;
   top: 15px;
@@ -18,7 +19,7 @@
     margin: 0 auto;
     width: 26px;
     height: 2px;
-    background-color: $mainColor !important;
+    background-color: white !important;
     margin-top: 6px;
     transition: $slow;
     &:nth-child(1) {
