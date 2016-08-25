@@ -12,7 +12,8 @@ footer {
       text-align: center;
       line-height: 50px;
       color: $navColor;
-      font-size: 1.2em;
+      font-size: $copyFont;
+      text-transform: uppercase;
     }
 
     .social-icons {

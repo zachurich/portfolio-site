@@ -25,6 +25,7 @@
     color: $mainColor;
     font-family: $mainFont;
     font-size: $headerFont;
+    text-transform: uppercase;
     font-weight: 600;
   }
 }
@@ -43,19 +44,19 @@
 // Button Styles
 .button {
   margin-top: 20px;
-  height: 50px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: $mainFont;
-  font-size: $copyFont;
+  font-size: $navFont;
+  font-weight: 600;
   color: white;
   border-radius: $corners;
-  padding: 8px 20px;
+  padding: 8px 30px;
   background-color: transparent;
   border: 2px solid white;
-
+  text-transform: uppercase;
   cursor: pointer;
   transition: $normal;
   &:active {
@@ -67,8 +68,33 @@
 }
 .button.red {
   transition: $normal;
+  &:hover {
+    background-color: white;
+    color: $red;
+  }
   &:active {
     background-color: white;
     color: $red;
+  }
+}
+
+.button.green {
+  border: 2px solid $green;
+  a {
+    text-decoration: none;
+    color: $green;
+    width: 100%;
+  }
+  &:hover {
+    background-color: $green;
+    a {
+      color: white;
+    }
+  }
+  &:active {
+    background-color: $green;
+    a {
+      color: white;
+    }
   }
 }
