@@ -5,6 +5,25 @@ GitHubActivity.feed({
 });
 
 $(document).ready(function() {
+	// smooth scroll
+	$(function() {
+		// Function Call
+		smoothScroll(800);
+	});
+
+	function smoothScroll (duration) {
+		// find target element
+		$('a[href^="#"]').on('click', function(event) {
+			// targets href attr
+			var target = $( $(this).attr('href') );
+			if( target.length ) {
+				event.preventDefault();
+				$('html, body').animate({
+					scrollTop: target.offset().top -80
+			}, duration);
+			}
+		});
+	};
 
   var thumbs = $('.work-thumb');
 

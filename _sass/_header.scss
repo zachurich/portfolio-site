@@ -29,10 +29,11 @@ header {
     font-family: $mainFont;
     font-size: 1.2em;
     color: $mainColor;
-    p {
+    a {
       color: $mainColor;
       font-size: $navFont;
       text-transform: uppercase;
+      text-decoration: none;
       padding: 0px 30px;
       line-height: 42px;
       height: 42px;
