@@ -59,6 +59,7 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: $normal;
+  &:hover,
   &:active {
     background-color: white;
     box-shadow: $buttonShadows;
@@ -68,33 +69,23 @@
 }
 .button.red {
   transition: $normal;
-  &:hover {
-    background-color: white;
-    color: $red;
-  }
+  &:hover,
   &:active {
     background-color: white;
     color: $red;
   }
 }
 
-.button.green {
-  border: 2px solid $green;
-  a {
-    text-decoration: none;
-    color: $green;
+
+
+a.button.green {
+    border: 2px solid $green !important;
+    text-decoration: none !important;
+    color: $green !important;
     width: 100%;
-  }
-  &:hover {
-    background-color: $green;
-    a {
-      color: white;
+    &:hover,
+    &:active {
+      background-color: $green !important;
+      color: white !important;
     }
   }
-  &:active {
-    background-color: $green;
-    a {
-      color: white;
-    }
-  }
-}
