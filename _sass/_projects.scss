@@ -15,7 +15,11 @@
     position: relative;
     transition: $slide;
     .content {
+      background: white;
+      box-shadow: $buttonShadows;
+      border-radius: $corners;
       width: 80%;
+      padding: 40px;
       margin: 0 auto;
       position: relative;
       .back-button {
@@ -24,15 +28,16 @@
         width: 40px;
         border-radius: 50%;
         border: 2px solid $green;
+        background-color: $green;
         position: absolute;
-        top: 18px;
+        top: 35px;
         left: -80px;
         transition: $normal;
         .back {
           position: absolute;
           left: 10px;
           display: inline-block;
-          background-color: $green;
+          background-color: white;
           height: 2px;
           width: 12px;
           border-radius: 4px;
@@ -46,20 +51,18 @@
           }
         }
         @include media($intermediate) {
-          left: 0px;
+          top: -18px;
+          left: -20px;
         }
         &:active {
-          background-color: $green;
           cursor: pointer;
           box-shadow: $buttonShadowSmall;
-          .back {
-            background-color: white;
-          }
         }
       }
       .content-title {
         position: relative;
           .title {
+            margin-top: 0;
             font-family: $mainFont;
             font-size: 1.6em;
             color: $green;
@@ -74,7 +77,6 @@
           font-size: $copyFont;
         }
         img {
-          border: 10px solid white;
           width: 100%;
         }
       }
