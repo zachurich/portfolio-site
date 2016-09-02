@@ -7,8 +7,8 @@ GitHubActivity.feed({
 $(document).ready(function() {
 	// smooth scroll
 	$(function() {
-		// Function Call
-		smoothScroll(800);
+		smoothScroll(200);
+    workLoad();
 	});
 
 	function smoothScroll (duration) {
@@ -96,6 +96,5 @@ $(document).ready(function() {
       $('.content-title').children('h1').html(title);
     })
   };
-  workLoad();
 
 });
