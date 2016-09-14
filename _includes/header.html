@@ -2,11 +2,14 @@
   <div class="container">
     <div class="logo"><a href="#top">Zach Urich</a></div>
     	<ul class="menu">
-    		<li><a href="#work">Projects</a></li>
-        <li><a href="#activity">Activity</a></li>
-    		<li class="callToAction">
-          <a href="#contact">Contact</a>
-        </li>
+        {% for menu in site.data.settings.menu %}
+      		<li><a href="{{ menu.url }}">{{ menu.name }}</a></li>
+        {% endfor %}
+        {% for callToAction in site.data.settings.callToAction %}
+      		<li class="callToAction">
+            <a href="{{callToAction.url}}">{{callToAction.name}}</a>
+          </li>
+        {% endfor %}
     	</ul>
       <div class="mobile-menu">
         <div class="menu-button">
@@ -15,12 +18,14 @@
           <span></span>
         </div>
         <ul class="menu-mobile">
-          <li><a class="blue" href="#about">About</a></li>
-          <li><a class="green" href="#work">Work</a></li>
-          <li><a class="yellow" href="#activity">Activity</a></li>
+          {% for menu in site.data.settings.menu %}
+          <li><a class="{{ menu.color }}" href="{{ menu.url }}">{{ menu.name }}</a></li>
+          {% endfor %}
+          {% for callToAction in site.data.settings.callToAction %}
           <li class="callToAction">
-            <a class="red" href="#contact">Contact</a>
+            <a class="{{ callToAction.color }}" href="#contact">{{ callToAction.name }}</a>
           </li>
+          {% endfor %}
         </ul>
       </div>
   </div>
