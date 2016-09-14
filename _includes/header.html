@@ -1,6 +1,6 @@
 <header>
   <div class="container">
-    <div class="logo"><a href="#top">Zach Urich</a></div>
+    <div class="logo"><a href="#top">{{ site.data.settings.title }}</a></div>
     	<ul class="menu">
         {% for menu in site.data.settings.menu %}
       		<li><a href="{{ menu.url }}">{{ menu.name }}</a></li>
