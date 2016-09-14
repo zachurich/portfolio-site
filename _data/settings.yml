@@ -7,10 +7,11 @@ description: Design and Code
 email: re.jo@live.com
 
 menu:
-- {name: About Me, url: '#about-me'}
-- {name: Work, url: '#work'}
-- {name: Clients, url: '#clients'}
-- {name: Contact, url: '#contact'}
+- {name: Projects, url: '#work', color: 'blue'}
+- {name: Activity, url: '#activity', color: 'green'}
+
+callToAction:
+- {name: Contact, url: '#contact', color: 'red'}
 
 #-------------------------------
 # SEO Section
@@ -18,7 +19,7 @@ menu:
 # NOTE: Providing SEO information will make this website more searchable on the internet.
 
 seo:
-  description: 'Provide a description for your website to make it visible to search engines.'
+  description: 'This is Zach Urichs, a designer and front-end developer, personal website'
   rel-author: 'https://plus.google.com/u/0/+DevTipsForDesigners/'
   rel-publisher: 'https://plus.google.com/u/0/+DevTipsForDesigners/'
 
