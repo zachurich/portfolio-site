@@ -5,6 +5,7 @@ GitHubActivity.feed({
 });
 
 $(document).ready(function() {
+  $('header').addClass('slideIn');
 	// smooth scroll
 	$(function() {
 		smoothScroll(200);
@@ -25,14 +26,17 @@ $(document).ready(function() {
 		});
 	};
 
-  var thumbs = $('.work-thumb');
-
   document.addEventListener("touchstart", function(){}, true);
   // Scroll Animation Detection
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    if (scroll >= 400) {
-        $(".content-1").addClass("popIn");
+    if(scroll >= 350) {
+      $('header').addClass('solidColor');
+    } else {
+      $('header').removeClass('solidColor');
+    }
+    if(scroll >= 400) {
+      $(".content-1").addClass("popIn");
     }
 });
   // Close menu when click outside if open
@@ -44,6 +48,13 @@ $(document).ready(function() {
     }
   });
 
+  $('.about-section').on('click', function() {
+    $('.bio-modal').css('display', 'flex');
+    $('.bio-container').addClass('popIn');
+  })
+  $('.close-button').on('click', function() {
+    $('.bio-modal').css('display', 'none');
+  })
   // Mobile Menu click function
   $('.menu-button').on('click', function() {
     if($('.menu-mobile').hasClass('popIn')) {
@@ -57,6 +68,8 @@ $(document).ready(function() {
       $('.menu-button').addClass('animate');
     }
   });
+
+  var thumbs = $('.work-thumb');
   thumbs.on('click', function() {
     // console.log('Hello');
     $('.project-container').show();
