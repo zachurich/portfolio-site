@@ -36,6 +36,35 @@
   }
 }
 
+.slideIn {
+  animation: slideIn 0.5s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.solidColor {
+  animation: solidColor 0.2s ease-in-out forwards;
+}
+
+@keyframes solidColor {
+  0% {
+    background-color: none;
+  }
+  100% {
+    background-color: white;
+    box-shadow: $diffusedShadow;
+  }
+}
+
 .popIn {
   display: block;
   animation: popIn 0.7s ease-in-out forwards;

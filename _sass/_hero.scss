@@ -1,10 +1,14 @@
 .hero-section {
-  margin-top: 80px;
   padding: 50px 0;
-  background: white;
+  min-height: 500px;
+  background: url('../assets/images/hero-bg.png') center center no-repeat white;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  @include media($tablet) {
+    background-size: 1280px 800px;
+  }
   @include media($mobile-medium) {
     flex-direction: column;
   }
