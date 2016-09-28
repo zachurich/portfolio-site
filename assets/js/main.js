@@ -30,11 +30,13 @@ $(document).ready(function() {
   // Scroll Animation Detection
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    // if(scroll >= 350) {
-    //   $('header').addClass('solidColor');
-    // } else {
-    //   $('header').removeClass('solidColor');
-    // }
+    if(scroll > 100) {
+      $('header').addClass('solid-header');
+      $('header').removeClass('trans-header');
+    } else {
+      $('header').addClass('trans-header');
+      $('header').removeClass('solid-header');
+    }
     if(scroll >= 400) {
       $(".content-bubble").addClass("popIn");
     }
