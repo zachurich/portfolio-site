@@ -1,0 +1,19 @@
+.flex-container {
+  display: inline-block;
+  width: 50%;
+  transition: $slide;
+  .flex-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1024px;
+    flex-wrap: wrap;
+    @include media($tablet) {
+
+    }
+    @include media($mobile-medium) {
+
+    }
+  }
+}
