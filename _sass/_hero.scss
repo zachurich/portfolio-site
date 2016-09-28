@@ -1,12 +1,28 @@
 .hero-section {
-  margin-top: 80px;
-  background-color: white;
-  height: 600px;
+  padding: 50px 0;
+  min-height: 500px;
+  background: url('../assets/images/hero-bg.png') center center no-repeat white;
+  background-attachment: fixed;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  @include media($tablet) {
+    background-size: 1280px 800px;
+  }
   @include media($mobile-medium) {
-    height: 500px;
+    flex-direction: column;
+  }
+  img {
+    max-width: 400px;
+    width: 50%;
+    min-width: 300px;
+    margin-left: 100px;
+    padding-right: 40px;
+    @include media($mobile-medium) {
+      padding-right: 0;
+      margin-left: 0;
+    }
   }
   h1 {
     text-align: center;
@@ -17,6 +33,7 @@
     padding: 0 20px;
     @include media($mobile-medium) {
       display: flex;
+      padding-top: 50px;
       flex-direction: column;
       justify-content: center;
     }

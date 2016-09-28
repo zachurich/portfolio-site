@@ -2,12 +2,13 @@
 
 <footer>
   <div class="container">
-    <p>Copyright 2016 Zach Urich</p>
+    {% for copyright in site.data.settings.copyright %}
+    <p>{{ copyright.text }}</p>
+    {% endfor %}
     <div class="social-icons">
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-instagram"></i></a>
-      <a href="#"><i class="fa fa-dribbble"></i></a>
-      <a href="#"><i class="fa fa-linkedin"></i></a>
+      {% for socialLinks in site.data.settings.socialLinks %}
+      <a href="{{ socialLinks.url }}"><i class="fa fa-{{ socialLinks.icon }}"></i></a>
+      {% endfor %}
     </div>
   </div>
 </footer>

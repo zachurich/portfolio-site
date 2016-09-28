@@ -5,15 +5,38 @@ GitHubActivity.feed({
 });
 
 $(document).ready(function() {
+  $('header').addClass('slideIn');
+	// smooth scroll
+	$(function() {
+		smoothScroll(200);
+    workLoad();
+	});
 
-  var thumbs = $('.work-thumb');
+	function smoothScroll (duration) {
+		// find target element
+		$('a[href^="#"]').on('click', function(event) {
+			// targets href attr
+			var target = $( $(this).attr('href') );
+			if( target.length ) {
+				event.preventDefault();
+				$('html, body').animate({
+					scrollTop: target.offset().top -80
+			}, duration);
+			}
+		});
+	};
 
   document.addEventListener("touchstart", function(){}, true);
   // Scroll Animation Detection
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    if (scroll >= 400) {
-        $(".content-1").addClass("popIn");
+    // if(scroll >= 350) {
+    //   $('header').addClass('solidColor');
+    // } else {
+    //   $('header').removeClass('solidColor');
+    // }
+    if(scroll >= 400) {
+      $(".content-bubble").addClass("popIn");
     }
 });
   // Close menu when click outside if open
@@ -38,6 +61,8 @@ $(document).ready(function() {
       $('.menu-button').addClass('animate');
     }
   });
+
+  var thumbs = $('.work-thumb');
   thumbs.on('click', function() {
     // console.log('Hello');
     $('.project-container').show();
@@ -51,15 +76,21 @@ $(document).ready(function() {
       $('.flex-row').show();
       $('.project-container').hide(500);
   });
-  $('.read-more').on('click', function() {
-    if($('.about-more').hasClass('grow')) {
-      $('.about-more').removeClass('grow');
-      $('.read-more').html('Read More');
+
+  $('.button.blue').on('click', function() {
+    if($('.about-section').hasClass('slideLeft')) {
+      $('.extended').hide(400);
+      $('.about-section').addClass('slideRight');
+      $('.about-section').removeClass('slideLeft');
     } else {
-      $('.about-more').addClass('grow');
-      $('.read-more').html('Read Less');
+      $('.extended').show(100);
+      $('.about-section').removeClass('slideRight');
+      $('.about-section').addClass('slideLeft');
     }
+  //  $('.flex-row').hide(2000);
   });
+
+
 
   function workLoad() {
     $.ajaxSetup({ cache: true });
@@ -77,6 +108,5 @@ $(document).ready(function() {
       $('.content-title').children('h1').html(title);
     })
   };
-  workLoad();
 
 });

@@ -1,13 +1,12 @@
 .about-section {
+  display: flex;
   padding: $sectionPadding;
   background-color: $mainColor;
+  width: 200%;
+  left: 0%;
   transition: $normal;
-  .about-card {
-    display: block;
-    margin: 0 auto;
-    width: 90%;
-    max-width: 600px;
-    .about-contents {
+  position: relative;
+  .about-contents {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,8 +24,9 @@
           border-radius: 50%;
         }
       }
-      .content-1 {
-        width: 90%;
+      .content-bubble {
+        width: 100%;
+        max-width: 500px;
         text-align: center;
         background-color: white;
         box-shadow: $buttonShadows;
@@ -38,22 +38,22 @@
         align-items: center;
         justify-content: center;
         opacity: 0;
-        margin-top: 20px;
-        &:nth-child(2) {
-          &:before {
-            position: absolute;
-            top: -10px;
-            left: 48%;
-            height: 0;
-            width: 2px;
-            content: ' ';
-            border-right: 10px solid transparent;
-            border-left: 10px solid transparent;
-            border-bottom: 10px solid white;
-            @include media($mobile-medium) {
-              left: 47%;
-            }
+        margin: 20px 20px 0;
+        &:before {
+          position: absolute;
+          top: -10px;
+          left: 48%;
+          height: 0;
+          width: 2px;
+          content: ' ';
+          border-right: 10px solid transparent;
+          border-left: 10px solid transparent;
+          border-bottom: 10px solid white;
+          @include media($mobile-medium) {
+            left: 47%;
           }
+        }
+        &:nth-child(2) {
         }
         p {
           margin: 0;
@@ -87,29 +87,26 @@
           border-radius: 50%;
         }
       }
-      p.about-more {
+      .content-bubble.extended {
         display: none;
         text-align: left;
-      }
-      .button {
-        margin-top: 20px;
-        height: 50px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: $mainFont;
-        color: $mainColor;
-        border-radius: $corners;
-        padding: 8px 20px;
-        border: 2px solid $mainColor;
-        cursor: pointer;
-        transition: $normal;
-        &:active {
-          color: white;
-          background-color: $mainColor;
+        max-width: 640px;
+        padding: 40px;
+        h1 {
+          margin: 0;
+          text-align: center;
+          font-family: $mainFont;
+          font-size: $headerFont;
+          color: $mainColorShade;
+        }
+        &:before {
+          width: 0;
+          content: '';
+          border: 0;
         }
       }
+      .button.blue {
+        margin-top: 40px;
+      }
     }
-  }
 }

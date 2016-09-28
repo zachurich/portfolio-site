@@ -10,15 +10,15 @@ body {
   font-size: 16px;
   transition: $normal;
 header {
-  background-color: $transparency;
+  background: white;
   height: 80px;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  box-shadow: 0px 0 50px -6px rgba(0,0,0, 0.2);
-  z-index: 9999;
+  box-shadow: $diffusedShadow;
+  z-index: 9997;
   .logo {
     box-sizing: border-box;
     height: 100%;
@@ -29,10 +29,11 @@ header {
     font-family: $mainFont;
     font-size: 1.2em;
     color: $mainColor;
-    p {
+    a {
       color: $mainColor;
       font-size: $navFont;
       text-transform: uppercase;
+      text-decoration: none;
       padding: 0px 30px;
       line-height: 42px;
       height: 42px;
@@ -59,7 +60,6 @@ header {
       font-family: $mainFont;
       font-weight: 600;
       cursor: pointer;
-      border-bottom: 2px solid white;
       box-sizing: border-box;
       transition: $normal;
       a {
@@ -71,9 +71,6 @@ header {
         &:hover {
           color: $mainColor;
         }
-      }
-      &:hover {
-        border-bottom: 2px solid $mainColor;
       }
     }
     .callToAction {

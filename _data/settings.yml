@@ -5,20 +5,46 @@
 title: Zach Urich
 description: Design and Code
 email: re.jo@live.com
+#-------------------------------
 
+# Define navigation links here
 menu:
-- {name: About Me, url: '#about-me'}
-- {name: Work, url: '#work'}
-- {name: Clients, url: '#clients'}
-- {name: Contact, url: '#contact'}
+- {name: Projects, url: '#work', color: 'blue'}
+- {name: Activity, url: '#activity', color: 'green'}
 
+callToAction:
+- {name: Contact, url: '#contact', color: 'red'}
+#-------------------------------
+
+# Define section headings here
+section-1: Projects
+section-2: Activity
+section-3: Contact
+#-------------------------------
+
+# Define footer content here, including social media link
+copyright:
+- {text: 'Copyright 2016 Zach Urich'}
+
+socialLinks:
+- {url: 'https://twitter.com/zach462', icon: 'twitter'}
+- {url: 'https://www.instagram.com/zachurich/', icon: 'instagram'}
+- {url: 'https://dribbble.com/ZachUrich', icon: 'dribbble'}
+- {url: 'https://www.linkedin.com/in/zach-urich', icon: 'linkedin'}
+#-------------------------------
+
+# Define project details here
+projects:
+- {name: Backpack, folder: 'proj-1', file: 'projects/proj-1.html'}
+- {name: Santa's Helpers, folder: 'proj-2', file: 'projects/proj-2.html'}
+- {name: AskBryan, folder: 'proj-3', file: 'projects/proj-3.html'}
 #-------------------------------
 # SEO Section
 
 # NOTE: Providing SEO information will make this website more searchable on the internet.
 
 seo:
-  description: 'Provide a description for your website to make it visible to search engines.'
+  description: 'Zach Urich is a designer and front-end developer'
   rel-author: 'https://plus.google.com/u/0/+DevTipsForDesigners/'
   rel-publisher: 'https://plus.google.com/u/0/+DevTipsForDesigners/'
 
@@ -31,16 +57,5 @@ seo:
 # NOTE: If you want to use Google Analytics for basic web tracking: Just uncomment and enter your UA-Code here.
 
 #google-analytics-ua: UA-XXXXXX-X
-
-#-------------------------------
-#-------------------------------
-# Work Section
-
-projects:
-- {name: Backpack, folder: 'proj-1', file: 'projects/proj-1.html'}
-- {name: Santa's Helpers, folder: 'proj-2', file: 'projects/proj-2.html'}
-- {name: Test, folder: 'proj-3', file: 'projects/proj-3.html'}
-
-
 
 #-------------------------------

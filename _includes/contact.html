@@ -1,11 +1,12 @@
 <section id="contact" class="heading-divider">
-  <p>Contact</p>
+  <p>{{ site.data.settings.section-3 }}</p>
 </section>
 <section class="contact-section">
-  <form>
-      <input placeholder='Name'></input>
-      <input placeholder='Email'></input>
-      <textarea placeholder='Inquiry'></textarea>
-      <button class="button red">Submit</button>
+  <form action="https://formspree.io/{{ site.data.settings.email }}" method="POST">
+      <input placeholder='Name' type="text" name="name"></input>
+      <input placeholder='Email' type="email" name="_replyto"></input>
+      <textarea type="text" name="message">Inquiry</textarea>
+      <button type="submit" class="button red" value="Send">Submit</button>
+      <input type="hidden" name="_next" value="//zachurich.github.io/thanks.html" />
   </form>
 </section>
