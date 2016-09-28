@@ -10,14 +10,12 @@ body {
   font-size: 16px;
   transition: $normal;
 header {
-  background: white;
   height: 80px;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  box-shadow: $diffusedShadow;
   z-index: 9997;
   .logo {
     box-sizing: border-box;
@@ -181,7 +179,11 @@ header {
           }
         }
       }
-
+    }
   }
 }
+
+.trans-header {
+  background: none;
+  box-shadow: none;
 }
