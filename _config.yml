@@ -19,3 +19,5 @@ github_username:  zachurich
 
 # Build settings
 markdown: kramdown
+gems:
+  - octopress-autoprefixer

@@ -59,6 +59,7 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: $normal;
+  outline: 0;
   &:hover,
   &:active {
     background-color: white;
@@ -68,11 +69,19 @@
   }
 }
 .button.red {
-  transition: $normal;
   &:hover,
   &:active {
     background-color: white;
     color: $red;
+  }
+}
+
+.button.blue {
+  border: 2px solid white;
+  &:hover,
+  &:active {
+    background: white;
+    color: $mainColor;
   }
 }
 
@@ -92,7 +101,7 @@ a.button.green {
   background: $mainColorShade;
   height: 2px;
   width: 20px;
-  margin: 0 auto 25px;
+  margin: 25px auto;
 }
 
 .bio-modal {

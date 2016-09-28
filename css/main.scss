@@ -4,12 +4,11 @@
 @charset "utf-8";
 
 // Import Bourbon and Neat for
-@import 'bourbon/bourbon';
 @import 'neat/neat';
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import 'variables';
-@import 'modal';
+@import 'flex-content';
 @import 'animations';
 @import 'github-activity';
 @import 'components';
