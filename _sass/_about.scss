@@ -57,7 +57,7 @@
         }
         p {
           margin: 0;
-          font-family: $mainFont;
+          font-family: $fontfamily-body;
           font-size: $copyFont;
           color: $mainColor;
           font-weight: 600;
@@ -95,7 +95,7 @@
         h1 {
           margin: 0;
           text-align: center;
-          font-family: $mainFont;
+          font-family: $fontfamily-body;
           font-size: $headerFont;
           color: $mainColorShade;
         }

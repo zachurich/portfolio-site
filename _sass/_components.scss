@@ -23,7 +23,7 @@
   align-items: center;
   p {
     color: $mainColor;
-    font-family: $mainFont;
+    font-family: $fontfamily-header;
     font-size: $headerFont;
     text-transform: uppercase;
     font-weight: 600;
@@ -48,7 +48,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: $mainFont;
+  font-family: $fontfamily-header;
   font-size: $navFont;
   font-weight: 600;
   color: white;
@@ -146,7 +146,7 @@ a.button.green {
     h1 {
       font-size: $headerFont;
       text-align: center;
-      font-family: $mainFont;
+      font-family: $fontfamily-body;
       color: $mainColorShade;
     }
     p {

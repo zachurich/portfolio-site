@@ -12,10 +12,9 @@
     flex-direction: column;
     input,
     textarea {
-      font-family: $mainFont;
+      font-family: $fontfamily-header;
       border-radius: 0;
       font-size: $copyFont;
-      font-weight: 300;
       color: white;
       width: 90%;
       margin-top: 20px;
