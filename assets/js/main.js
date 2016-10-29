@@ -70,13 +70,13 @@ $(document).ready(function() {
     $('.project-container').show();
     $('.work-section').removeClass('slideRight');
     $('.work-section').addClass('slideLeft');
-  //  $('.flex-row').hide(2000);
+   $('.flex-row').hide(400);
   });
   $('.back-button').on('click', function() {
       $('.work-section').removeClass('slideLeft');
       $('.work-section').addClass('slideRight');
-      $('.flex-row').show();
-      $('.project-container').hide(500);
+      $('.flex-row').show(100);
+      $('.project-container').hide(300);
   });
 
   $('.button.blue').on('click', function() {
@@ -110,5 +110,17 @@ $(document).ready(function() {
       $('.content-title').children('h1').html(title);
     })
   };
+
+  // Formspree stuff
+  var form = $('form');
+  form.submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+      url: "https://formspree.io/re.jo@live.com",
+      method: "POST",
+      data: $(this).serialize(),
+      dataType: "json"
+    });
+  })
 
 });

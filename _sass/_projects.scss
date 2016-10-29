@@ -63,7 +63,7 @@
         position: relative;
           .title {
             margin-top: 0;
-            font-family: $mainFont;
+            font-family: $fontfamily-header;
             font-size: 1.6em;
             color: $green;
             @include media($intermediate) {

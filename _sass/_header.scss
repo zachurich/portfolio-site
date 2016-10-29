@@ -24,7 +24,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: $mainFont;
+    font-family: $fontfamily-header;
     font-size: 1.2em;
     color: $mainColor;
     a {
@@ -55,7 +55,7 @@ header {
       margin-right: 20px;
       font-size: $navFont;
       text-transform: uppercase;
-      font-family: $mainFont;
+      font-family: $fontfamily-body;
       font-weight: 600;
       cursor: pointer;
       box-sizing: border-box;
@@ -173,7 +173,7 @@ header {
             font-weight: 300;
             text-decoration: none;
             font-weight: 600;
-            font-family: $mainFont;
+            font-family: $fontfamily-body;
             font-size: $navFont;
             text-transform: uppercase;
           }
