@@ -1,0 +1,66 @@
+// Button Styles
+.button {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $fontfamily-header;
+  font-size: $navFont;
+  font-weight: 600;
+  color: white;
+  border-radius: $corners;
+  padding: 8px 30px;
+  background-color: transparent;
+  border: 2px solid white;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: $normal;
+  outline: 0;
+  &:hover,
+  &:active {
+    background-color: white;
+    box-shadow: $diffusedShadow;
+    transform: scale(1);
+    cursor: pointer;
+  }
+}
+.button.red {
+  &:hover,
+  &:active {
+    background-color: white;
+    color: $red;
+  }
+}
+
+.button.blue-ghosted {
+  &:hover,
+  &:active {
+    background: white;
+    color: $mainColor;
+  }
+}
+
+.button.blue-solid {
+  background: white;
+  border: 2px solid $mainColor;
+  color: $mainColor;
+  &:hover,
+  &:active {
+    background: $mainColor;
+    color: white;
+  }
+}
+
+a.button.green {
+  border: 2px solid $green !important;
+  text-decoration: none !important;
+  color: $green !important;
+  width: 100%;
+  &:hover,
+  &:active {
+    background-color: $green !important;
+    color: white !important;
+  }
+}

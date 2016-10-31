@@ -41,61 +41,6 @@
 .green {
   color: $green;
 }
-// Button Styles
-.button {
-  margin-top: 20px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: $fontfamily-header;
-  font-size: $navFont;
-  font-weight: 600;
-  color: white;
-  border-radius: $corners;
-  padding: 8px 30px;
-  background-color: transparent;
-  border: 2px solid white;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: $normal;
-  outline: 0;
-  &:hover,
-  &:active {
-    background-color: white;
-    box-shadow: $buttonShadows;
-    transform: scale(1);
-    cursor: pointer;
-  }
-}
-.button.red {
-  &:hover,
-  &:active {
-    background-color: white;
-    color: $red;
-  }
-}
-
-.button.blue {
-  border: 2px solid white;
-  &:hover,
-  &:active {
-    background: white;
-    color: $mainColor;
-  }
-}
-
-a.button.green {
-  border: 2px solid $green !important;
-  text-decoration: none !important;
-  color: $green !important;
-  width: 100%;
-  &:hover,
-  &:active {
-    background-color: $green !important;
-    color: white !important;
-  }
-}
 
 .divider {
   background: $mainColorShade;
@@ -104,53 +49,12 @@ a.button.green {
   margin: 25px auto;
 }
 
-.bio-modal {
-  display: none;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: rgba(0,0,0, 0.7);
-  z-index: 9999;
-  align-items: center;
-  justify-content: center;
-  .bio-container {
-    overflow: auto;
-    position: fixed;
-    background: white;
-    top: 100px;
-    width: 100%;
-    max-width: 50em;
-    padding: 50px;
-    border-radius: $corners;
-    box-shadow: $buttonShadows;
-    @include media($intermediate) {
-      top: 0;
-      height: 100vh;
-    }
-    .close-button {
-      position: absolute;
-      right: 20px;
-      top: 20px;
-      height: 40px;
-      width: 40px;
-      border-radius: 50%;
-      border: 2px solid $green;
-      transition: $normal;
-      &:hover,
-      &:active {
-        background-color: $green;
-      }
-    }
-    h1 {
-      font-size: $headerFont;
-      text-align: center;
-      font-family: $fontfamily-body;
-      color: $mainColorShade;
-    }
-    p {
-      color: $mainColor;
-    }
-  }
+.content-card {
+  padding: 20px;
+  background: white;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 20px;
+  border-radius: $corners;
+  box-shadow: $diffusedShadow;
 }

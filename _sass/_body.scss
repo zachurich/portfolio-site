@@ -20,8 +20,10 @@ li {
   }
 }
 p {
-  color: white;
   font-size: $copyFont;
+  font-family: $fontfamily-body;
+  color: $color-copy;
+  font-weight: 600;
 }
 h1 {
   font-size: 2em;

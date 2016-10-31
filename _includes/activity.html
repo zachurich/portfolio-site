@@ -1,4 +1,6 @@
+{% for section-details in site.data.settings.section-2 %}
 <section id="activity" class="heading-divider">
-  <p>{{ site.data.settings.section-2 }}</p>
+  <p>{{ section-details.name }}</p>
 </section>
 {% include github.html %}
+{% endfor %}
