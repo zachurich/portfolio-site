@@ -251,7 +251,9 @@ var GitHubActivity = (function() {
 
     methods.getOutputFromRequest(userUrl, function(error, output) {
       if (error) {
-        header = Mustache.render(templates.UserNotFound, { username: options.username });
+        document.getElementById('activity').style.display = 'none';
+        document.querySelector('.activity-section').style.display = 'none';
+        // header = Mustache.render(templates.UserNotFound, { username: options.username });
       } else {
         header = methods.getHeaderHTML(output)
       }

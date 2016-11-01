@@ -12,99 +12,14 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-      .bio-pic {
-        height: 150px;
-        width: 150px;
-        border-radius: 50%;
-        margin-bottom: 25px;
-        box-shadow: $buttonShadows;
-        img {
-          width: 100%;
-          height: 100%;
-          border-radius: 50%;
-        }
-      }
-
-      .content-bubble.hideOnLoad {
-        opacity: 0;
-      }
-      .content-bubble {
-        width: 100%;
-        max-width: 500px;
-        text-align: center;
-        background-color: white;
-        box-shadow: $buttonShadows;
-        border-radius: $corners;
-        padding: 20px;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 20px 20px 0;
-        &:before {
-          position: absolute;
-          top: -10px;
-          left: 48%;
-          height: 0;
-          width: 2px;
-          content: ' ';
-          border-right: 10px solid transparent;
-          border-left: 10px solid transparent;
-          border-bottom: 10px solid white;
-          @include media($mobile-medium) {
-            left: 47%;
-          }
-        }
-        &:nth-child(2) {
-        }
-        p {
-          margin: 0;
-          @include media($mobile-medium) {
-
-          }
-          span {
-            color: $mainColorShade;
-          }
-        }
-        img.icon-1 {
-          background: white;
-          display: inline-block;
-          margin-left: 20px;
-          height: 50px;
-          width: 50px;
-          border-radius: 50%;
-        }
-        img.icon-2 {
-          background: white;
-          display: inline-block;
-          margin-left: 0;
-          margin-right: 20px;
-          height: 50px;
-          width: 50px;
-          border-radius: 50%;
-        }
-      }
-      .content-bubble.extended {
-        display: none;
-        text-align: left;
-        max-width: 640px;
-        padding: 40px;
-        h1 {
-          margin: 0;
-          text-align: center;
-          font-family: $fontfamily-body;
-          font-size: $headerFont;
-          color: $mainColorShade;
-        }
-        &:before {
-          width: 0;
-          content: '';
-          border: 0;
-        }
-      }
-      .button.blue {
-        margin-top: 40px;
-      }
+    .button.blue {
+      margin-top: 40px;
     }
+    span.one {
+      color: $mainColor;
+    }
+    span.two {
+      color: $red;
+    }
+  }
 }

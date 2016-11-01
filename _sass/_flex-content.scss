@@ -16,4 +16,8 @@
 
     }
   }
+  .flex-column {
+    @extend .flex-row;
+    flex-direction: column;
+  }
 }

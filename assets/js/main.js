@@ -1,7 +1,9 @@
 GitHubActivity.feed({
     username: "zachurich",
     selector: "#feed",
-    limit: 5 // optional
+    limit: 5, // optional
+    clientId: '5dcb640cf13fad8be8a6',
+    clientSecret: 'eb7e52cc1957176d76bf9711fbb5f12f4776cf69',
 });
 
 $(document).ready(function() {
@@ -47,7 +49,7 @@ $(document).ready(function() {
       $('header').addClass('trans-header');
       $('header').removeClass('solid-header');
     }
-    if(scroll >= 300) {
+    if(scroll >= 200) {
       $(".content-bubble.hideOnLoad").addClass("popIn");
     }
 });
@@ -129,12 +131,26 @@ $(document).ready(function() {
       method: "POST",
       data: $(this).serialize(),
       dataType: "json",
-      success: function(data) {
+      error: function(XMLHttpRequest, textStatus, errorThrown){
+      },
+      success: function(data){
         if(success = 'email sent'){
             console.log('Success!');
+            scrollSection();
         }
-      }
+      },
     });
   })
+
+function scrollSection() {
+  var section = $('.contact-section');
+  if((section).hasClass('slideLeft')) {
+    $(section).addClass('slideRight');
+    $(section).removeClass('slideLeft');
+  } else {
+    $(section).removeClass('slideRight');
+    $(section).addClass('slideLeft');
+  }
+}
 
 });

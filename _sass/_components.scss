@@ -49,12 +49,26 @@
   margin: 25px auto;
 }
 
-.content-card {
-  padding: 20px;
+.me-small {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
   background: white;
-  width: 100%;
+  box-shadow: $diffusedShadow;
+  img {
+    width: 100%;
+  }
+  margin-right: 20px;
+}
+
+.content-card {
+  text-align: center;
+  padding: 20px 40px;
+  background: white;
   max-width: 500px;
-  margin: 0 auto 20px;
+  margin: 0;
   border-radius: $corners;
   box-shadow: $diffusedShadow;
+  color: $color-copy;
 }
