@@ -132,6 +132,7 @@ $(document).ready(function() {
       data: $(this).serialize(),
       dataType: "json",
       error: function(XMLHttpRequest, textStatus, errorThrown){
+        formValidation();
       },
       success: function(data){
         if(success = 'email sent'){
@@ -150,6 +151,20 @@ function scrollSection() {
   } else {
     $(section).removeClass('slideRight');
     $(section).addClass('slideLeft');
+  }
+}
+
+function formValidation() {
+  var form = $('form');
+  var inputName = $("input[name='name']");
+  var inputEmail = $("input[type='email']");
+  console.log(inputName.val().length);
+  console.log(inputEmail.val().length);
+  if(inputName.val().length <= 0 && inputEmail.val().length <= 0) {
+    form.children().not('button').addClass('shake');
+    setTimeout(function() {
+      form.children().not('button').removeClass('shake');
+    }, 1000);
   }
 }
 

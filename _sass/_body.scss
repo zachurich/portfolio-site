@@ -32,8 +32,8 @@ h1 {
 
 a {
   text-decoration: none;
-  color: $mainColorShade;
+  color: $mainColor;
   &:hover {
-    color: $mainColor;
+    color: $mainColorShade;
   }
 }

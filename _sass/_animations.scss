@@ -145,3 +145,34 @@
   0% {background: none; box-shadow: none;}
   100% {background: white; box-shadow: $diffusedShadow;}
 }
+
+.shake {
+  animation: shake 1s ease-in-out forwards;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(-40px);
+  }
+  15% {
+    transform: translateX(40px);
+  }
+  30% {
+    transform: translateX(-20px);
+  }
+  45% {
+    transform: translateX(20px);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  90% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
