@@ -65,12 +65,12 @@ $(document).ready(function() {
   // Mobile Menu click function
   $('.menu-button').on('click', function() {
     if($('.menu-mobile').hasClass('popIn')) {
-      $('.menu-mobile').removeClass('popIn');
+      $('.menu-mobile').removeClass('popIn').hide(400);
       $('.menu-mobile').addClass('slideDown');
       // Hide after certain amount of time
       $('.menu-button').removeClass('animate');
     } else {
-      $('.menu-mobile').addClass('popIn');
+      $('.menu-mobile').show().addClass('popIn');
       $('.menu-mobile').removeClass('slideDown');
       $('.menu-button').addClass('animate');
     }

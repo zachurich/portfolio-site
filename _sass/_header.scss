@@ -149,6 +149,9 @@ header {
         border-radius: 4px;
         transform: translateY(-350px);
         transition: 0.5s ease-in-out;
+        @include media($desktop) {
+          display: none !important;
+        }
         &:before {
           position: absolute;
           top: -10px;
