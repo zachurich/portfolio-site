@@ -7,7 +7,9 @@ GitHubActivity.feed({
 });
 
 $(document).ready(function() {
+  document.addEventListener("touchstart", function(){}, true);
 	$(function() {
+    iconSlider();
     fadeInOnLoad();
 		smoothScroll(200);
     workLoad();
@@ -37,8 +39,6 @@ $(document).ready(function() {
 			}
 		});
 	};
-
-  document.addEventListener("touchstart", function(){}, true);
   // Scroll Animation Detection
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
@@ -168,4 +168,61 @@ function formValidation() {
   }
 }
 
+////////
+
+var count  = 0,
+    circle = document.getElementById('icon-container'),
+    icon1  = document.getElementById('icon1'),
+    icon2  = document.getElementById('icon2'),
+    icon3  = document.getElementById('icon3'),
+    logo = $("a[href='#top']");
+
+// Delays for fading logo
+function iconSlider() {
+  setTimeout(function() {
+    logo.addClass('fadeOut');
+  }, 3500);
+  timing(500);
+}
+
+// Calling this will start the interval
+function timing(interval) {
+  // Interval calls the showHide function every 3 seconds
+  setTimeout(function() {
+    setInterval(showHide, 3000);
+  }, interval);
+}
+
+// Function for showing/hiding elements depending on count
+function showHide() {
+  count++;
+  if(count === 1) {
+    circle.style.display = "block"
+    icon1.style.display = "block";
+  } else
+  if(count === 2) {
+    icon1.style.display = "none";
+    icon2.style.display = "block";
+  } else
+  if(count === 3) {
+    icon2.style.display = "none";
+    icon3.style.display = "block";
+  } else
+  if(count === 4){
+    circle.style.display = "none";
+    icon3.style.display = "none";
+    logo.addClass('fadeIn');
+  } else
+  if(count === 5 || count === 6){
+    circle.style.display = "none";
+    icon3.style.display = "none";
+  }
+  else {
+    circle.style.display = "block";
+    logo.removeClass('fadeIn').addClass('fadeOut');
+    icon1.style.display = "block";
+    count = 1;
+  }
+  // console.log(count);
+}
 });

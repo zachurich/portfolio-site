@@ -1,13 +1,24 @@
 <header>
   <div class="container">
     <div class="logo"><a href="#top">{{ site.data.settings.title }}</a></div>
+    <div class="icon-slider logo">
+      <div id="icon-container" class="elements">
+        {% for icon in site.data.settings.icons %}
+          <div
+          id="icon{{ icon.number }}"
+          class="icon"
+          style="background: url( assets/images/icons/{{ icon.image }}.svg )">
+          </div>
+        {% endfor %}
+      </div>
+    </div>
     	<ul class="menu">
         {% for menu in site.data.settings.menu %}
       		<li><a href="{{ menu.url }}">{{ menu.name }}</a></li>
         {% endfor %}
         {% for callToAction in site.data.settings.callToAction %}
       		<li class="callToAction">
-            <a href="{{callToAction.url}}">{{callToAction.name}}</a>
+            <a href="{{ callToAction.url }}">{{callToAction.name}}</a>
           </li>
         {% endfor %}
     	</ul>

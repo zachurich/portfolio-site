@@ -16,6 +16,12 @@ callToAction:
 - {name: Contact, url: '#contact', color: 'red'}
 #-------------------------------
 
+# Icon Slider images
+icons:
+- {number: 1 , image: 'design'}
+- {number: 2 , image: 'plus'}
+- {number: 3 , image: 'code'}
+
 # Define section headings
 section-1: Projects
 section-2:
@@ -31,7 +37,7 @@ socialLinks:
 - {url: 'https://twitter.com/zach462', icon: 'twitter'}
 - {url: 'https://www.instagram.com/zachurich/', icon: 'instagram'}
 - {url: 'https://dribbble.com/ZachUrich', icon: 'dribbble'}
-- {url: 'https://www.linkedin.com/in/zach-urich', icon: 'linkedin'}
+- {url: 'https://github.com/zachurich', icon: 'github'}
 #-------------------------------
 
 # Define project details here
