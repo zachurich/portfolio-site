@@ -148,7 +148,8 @@ function formValidation() {
 var form = $('form');
 var inputName = $("input[name='name']");
 var inputEmail = $("input[type='email']");
-if(inputName.val().length >= 0 && inputEmail.val().length >= 0) {
+var inputText = $("textarea");
+if(inputName.val().length > 0 && inputEmail.val().length > 0 && inputText.val().length > 0) {
   form.submit(function(e) {
     e.preventDefault();
     $.ajax({
