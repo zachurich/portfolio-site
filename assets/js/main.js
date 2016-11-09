@@ -106,21 +106,21 @@ $(document).ready(function() {
       $('.project-container').hide(300);
   });
 
-  function workLoad() {
-    $.ajaxSetup({ cache: true });
-    thumbs.on('click', function() {
-      var $this = $(this),
-          // get proj title from thumb img alt text
-          title = $(this).children("img").attr("alt"),
-          // get proj folder from thumb data attr
-          folder = $this.data('folder'),
-          // get appropriate folder
-          newHTML = 'projects/' + folder + '.html';
-      // Load all the stuff
-      $('.content-content').load(newHTML);
-      $('.content-title').children('h1').html(title);
-    })
-  };
+function workLoad() {
+  $.ajaxSetup({ cache: true });
+  thumbs.on('click', function() {
+    var $this = $(this),
+        // get proj title from thumb img alt text
+        title = $(this).children("img").attr("alt"),
+        // get proj folder from thumb data attr
+        folder = $this.data('folder'),
+        // get appropriate folder
+        newHTML = 'projects/' + folder + '.html';
+    // Load all the stuff
+    $('.content-content').load(newHTML);
+    $('.content-title').children('h1').html(title);
+  })
+};
 
 function scrollSection() {
   var section = $('.contact-section');
@@ -135,10 +135,6 @@ function scrollSection() {
 
 function formValidation() {
   var form = $('form');
-  // var inputName = $("input[name='name']");
-  // var inputEmail = $("input[type='email']");
-  // console.log(inputName.val().length);
-  // console.log(inputEmail.val().length);
   form.children().not('button').addClass('shake');
   setTimeout(function() {
       form.children().not('button').removeClass('shake');
@@ -149,32 +145,31 @@ var form = $('form');
 var inputName = $("input[name='name']");
 var inputEmail = $("input[type='email']");
 var inputText = $("textarea");
-if(inputName.val().length > 0 && inputEmail.val().length > 0 && inputText.val().length > 0) {
   form.submit(function(e) {
     e.preventDefault();
-    $.ajax({
-      url: "https://formspree.io/re.jo@live.com",
-      method: "POST",
-      data: $(this).serialize(),
-      dataType: "json",
-      error: function(XMLHttpRequest, textStatus, errorThrown){
-        formValidation();
-      },
-      success: function(data){
-        if(success = 'email sent'){
-            console.log('Success!');
-            scrollSection();
-        }
-      },
-    });
-  })
-} else {
-  formValidation();
-}
+    if(inputName.val().length > 0 && inputEmail.val().length > 0 && inputText.val().length > 0) {
+      $.ajax({
+        url: "https://formspree.io/re.jo@live.com",
+        method: "POST",
+        data: $(this).serialize(),
+        dataType: "json",
+        error: function(XMLHttpRequest, textStatus, errorThrown){
+          formValidation();
+        },
+        success: function(data){
+          if(success = 'email sent'){
+              console.log('Success!');
+              scrollSection();
+          }
+        },
+      });
+    } else {
+      formValidation();
+    }
+})
 
 
 ////////
-
 var count  = 0,
     circle = document.getElementById('icon-container'),
     icon1  = document.getElementById('icon1'),
