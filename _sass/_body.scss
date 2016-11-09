@@ -30,7 +30,11 @@ h1 {
   font-size: 2em;
 }
 
-a {
+a
+:not(.red)
+:not(.blue)
+:not(.green)
+:not(.yellow) {
   text-decoration: none;
   color: $mainColor;
   &:hover {
