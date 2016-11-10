@@ -52,9 +52,9 @@ projects:
 # NOTE: Providing SEO information will make this website more searchable on the internet.
 
 seo:
-  description: 'Zach Urich is a designer and front-end developer'
-  rel-author: 'https://plus.google.com/u/0/+DevTipsForDesigners/'
-  rel-publisher: 'https://plus.google.com/u/0/+DevTipsForDesigners/'
+  description: 'Zach Urich is a designer and front-end developer with a passion for creating.'
+  rel-author: 'https://twitter.com/zach462'
+  rel-publisher: 'https://twitter.com/zach462'
 
 #-------------------------------
 # Google Analytics Section
@@ -64,6 +64,6 @@ seo:
 
 # NOTE: If you want to use Google Analytics for basic web tracking: Just uncomment and enter your UA-Code here.
 
-#google-analytics-ua: UA-XXXXXX-X
+google-analytics-ua: UA-87135893-1
 
 #-------------------------------
