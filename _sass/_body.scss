@@ -13,6 +13,10 @@ body {
   transition: $normal;
   width: 100%;
   position: relative;
+  font-size: 18px;
+  @include media($mobile-medium) {
+    font-size: 16px;
+  }
 }
 
 li {
