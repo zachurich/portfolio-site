@@ -44,8 +44,7 @@ socialLinks:
 projects:
 - {name: Backpack, folder: 'proj-1', file: 'projects/proj-1.html'}
 - {name: Santa's Helpers, folder: 'proj-2', file: 'projects/proj-2.html'}
-- {name: AskBryan, folder: 'proj-3', file: 'projects/proj-3.html'}
-- {name: Quotes For Creatives, folder: 'proj-4', file: 'projects/proj-4.html'}
+- {name: Quotes For Creatives, folder: 'proj-3', file: 'projects/proj-3.html'}
 #-------------------------------
 # SEO Section
 
